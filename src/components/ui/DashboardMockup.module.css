@@ -1,0 +1,135 @@
+.dashboardContainer {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  letter-spacing: 1px;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-glass);
+}
+
+.body {
+  padding: 1.5rem;
+}
+
+.statsRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statBox {
+  flex: 1;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.statBox:hover {
+  border-color: var(--border-hover);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  height: 24px;
+  width: 60%;
+  background: var(--border-glass);
+  border-radius: 4px;
+}
+
+.chartArea {
+  height: 120px;
+  border: 1px dashed var(--border-glass);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  gap: 10px;
+}
+
+.bar {
+  flex: 1;
+  background: var(--accent);
+  opacity: 0.6;
+  border-radius: 4px 4px 0 0;
+  transition: opacity 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 1;
+}
+
+.recordsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recordLabel {
+  font-size: 0.85rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.recordItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--bg-surface);
+  border-radius: 6px;
+}
+
+.recordIcon {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.recordLine {
+  flex: 1;
+  height: 8px;
+  background: var(--border-glass);
+  border-radius: 4px;
+}

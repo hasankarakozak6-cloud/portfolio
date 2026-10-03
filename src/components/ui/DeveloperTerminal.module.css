@@ -1,0 +1,92 @@
+.terminalWrapper {
+  width: 100%;
+  max-width: 500px;
+  background: var(--bg-terminal);
+  border-radius: 12px;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.terminalHeader {
+  height: 36px;
+  background: var(--bg-terminal-header);
+  border-bottom: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dotRed {
+  background-color: #ff5f56;
+}
+
+.dotYellow {
+  background-color: #ffbd2e;
+}
+
+.dotGreen {
+  background-color: #27c93f;
+}
+
+.terminalBody {
+  padding: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 250px;
+}
+
+.commandRow {
+  margin-bottom: 16px;
+}
+
+.commandRow:last-child {
+  margin-bottom: 0;
+}
+
+.prompt {
+  color: var(--accent);
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.command {
+  color: var(--text-secondary);
+}
+
+.output {
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.outputList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: var(--text-main);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

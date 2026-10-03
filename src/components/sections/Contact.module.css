@@ -1,0 +1,127 @@
+.contactSection {
+  padding: 10rem 0 8rem 0;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.contactIntro {
+  max-width: 600px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+  letter-spacing: -1px;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.contactInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-glass);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.valueWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  font-size: 1.25rem;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+  word-break: break-all; /* Prevents overflow on long emails */
+}
+
+.arrow {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover and Focus States for Links */
+.linkItem:hover, .linkItem:focus-visible {
+  border-bottom-color: var(--accent);
+}
+
+.linkItem:hover .label, .linkItem:focus-visible .label {
+  color: var(--accent-light);
+}
+
+.linkItem:hover .value, .linkItem:focus-visible .value {
+  color: var(--accent);
+}
+
+.linkItem:hover .arrow, .linkItem:focus-visible .arrow {
+  color: var(--accent);
+  transform: translate(5px, -5px);
+}
+
+/* Focus styles for accessibility */
+.linkItem:focus-visible {
+  background: var(--bg-surface-hover);
+  border-radius: 4px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 992px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactSection {
+    padding: 6rem 0;
+  }
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  .infoItem {
+    padding: 1.25rem 0;
+  }
+  .value {
+    font-size: 1.1rem;
+  }
+}

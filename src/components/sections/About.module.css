@@ -1,0 +1,105 @@
+.aboutSection {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sectionLine {
+  height: 1px;
+  flex: 1;
+  max-width: 200px;
+  background: linear-gradient(to right, var(--border-glass), transparent);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutTextWrapper {
+  max-width: 550px;
+}
+
+.leadText {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.subText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.cardsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  padding: 1.5rem 2rem;
+  border-left: 2px solid var(--border-glass);
+  background: var(--bg-surface);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCard:hover {
+  border-left-color: var(--accent);
+  background: var(--bg-surface-hover);
+  transform: translateX(5px);
+}
+
+.cardNumber {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+@media (max-width: 992px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 4rem 0;
+  }
+  .leadText {
+    font-size: 1.25rem;
+  }
+  .infoCard {
+    padding: 1.25rem 1.5rem;
+  }
+}

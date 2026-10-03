@@ -1,0 +1,184 @@
+.projectsSection {
+  padding: 8rem 0;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.sectionTitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sectionDesc {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.projectShowcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.projectShowcase:hover {
+  transform: translateY(-5px);
+}
+
+.projectShowcase.reversed {
+  direction: rtl;
+}
+
+.projectShowcase.reversed > * {
+  direction: ltr;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectNumber {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.projectTitle {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.projectSubtitle {
+  font-size: 1.125rem;
+  color: var(--accent-light);
+  margin-bottom: 1.5rem;
+}
+
+.projectDesc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.techTag {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-main);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.primaryLink {
+  color: var(--text-main);
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.primaryLink:hover, .primaryLink:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.primaryLink:hover .arrowIcon, .primaryLink:focus-visible .arrowIcon {
+  transform: translateX(4px);
+}
+
+.githubLink {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.githubLink:hover {
+  color: var(--text-main);
+}
+
+.projectVisual {
+  position: relative;
+  border: 1px solid transparent;
+  transition: all 0.4s ease;
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.projectShowcase:hover .projectVisual {
+  border-color: var(--border-hover);
+  background: var(--bg-surface-hover);
+}
+
+@media (max-width: 1024px) {
+  .projectShowcase {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    padding: 5rem 0;
+  }
+  .projectsWrapper {
+    gap: 6rem;
+  }
+  .projectShowcase, .projectShowcase.reversed {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  .projectVisual {
+    padding: 1rem 0;
+    order: 2; /* Visual below text */
+  }
+  .projectInfo {
+    order: 1; /* Text above visual */
+  }
+}
